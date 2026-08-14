@@ -1,113 +1,33 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Teste de IMC</title>
+  <title>Meu Blog</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 30px;
-      max-width: 400px;
+    header{
+      background-color: red;
+      color: blue;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 16px;
     }
-    .campo {
-      margin-bottom: 15px;
-    }
-    label {
-      display: block;
-      margin-bottom: 5px;
-    }
-    input {
-      width: 100%;
-      padding: 8px;
-      box-sizing: border-box;
-    }
-    button {
-      padding: 10px 15px;
-      background-color: #28a745;
-      color: white;
-      border: none;
-      cursor: pointer;
-      width: 100%;
-      font-size: 16px;
-    }
-    button:hover {
-      background-color: #218838;
-    }
-    #resultado {
-      margin-top: 20px;
-      font-weight: bold;
+    main{
+       background-color: pink;
+      color: black;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 16px;
     }
   </style>
 </head>
 <body>
-  <h1>Meu primeiro site</h1>
-  <h2>Ola meu nome e Gustavo sou aluno do primeiro DS e estou fazendo meu "pimeiro site"</h2>
-  <p>Confesso que precisei da ajuda go gemini bom vou falar bem a real eu que tive essa ideia fiz todo o codigo no portugol e pedi pro gemini passar para html, e o resultado foi esse</p>
-  <p>A tambem vou deixar a qui o link do codigo no portugol:https://portugol.dev/#share=uw2dem0</p>
-  <h2>Olá, bem-vindo ao Teste de IMC!</h2>
-
-  <div class="campo">
-    <label for="nome">Nome completo:</label>
-    <input type="text" id="nome" placeholder="Digite seu nome">
-  </div>
-
-  <div class="campo">
-    <label for="idade">Idade:</label>
-    <input type="number" id="idade" placeholder="Digite sua idade">
-  </div>
-
-  <p>Agora iremos pedir para que nos informe sua altura e peso para calcularmos seu IMC:</p>
-
-  <div class="campo">
-    <label for="peso">Peso (kg):</label>
-    <input type="number" id="peso" step="0.1" placeholder="Ex: 70.5">
-  </div>
-
-  <div class="campo">
-    <label for="altura">Altura (m):</label>
-    <input type="number" id="altura" step="0.01" placeholder="Ex: 1.75">
-  </div>
-
-  <button onclick="calcularIMC()">Calcular IMC</button>
-
-  <div id="resultado"></div>
-
-  <script>
-    function calcularIMC() {
-      // Obter os valores dos campos
-      const nome = document.getElementById('nome').value;
-      const peso = parseFloat(document.getElementById('peso').value);
-      const altura = parseFloat(document.getElementById('altura').value);
-      const divResultado = document.getElementById('resultado');
-
-      // Validação simples dos dados
-      if (!nome || isNaN(peso) || isNaN(altura) || altura <= 0) {
-        divResultado.innerText = "Por favor, preencha todos os campos corretamente!";
-        return;
-      }
-
-      // Cálculo do IMC: IMC = peso / (altura * altura)
-      const imc = peso / (altura * altura);
-      const imcFormatado = imc.toFixed(2); // Formata para 2 casas decimais
-
-      let mensagem = "";
-
-      // Estrutura condicional ajustada (se / senao se)
-      if (imc < 18.5) {
-        mensagem = `${nome}, seu IMC é de ${imcFormatado}. Você está abaixo do peso, coma mais!`;
-      } else if (imc < 25.0) {
-        mensagem = `${nome}, seu IMC é de ${imcFormatado}. Você está em uma faixa saudável, parabéns continue assim!`;
-      } else if (imc <= 29.9) {
-        mensagem = `${nome}, seu IMC é de ${imcFormatado}. Você está acima do peso, nada que umas corridas e academia não resolvam, boa sorte!`;
-      } else {
-        mensagem = `${nome}, seu IMC é de ${imcFormatado}. Você está em obesidade, procure um médico urgente!`;
-      }
-
-      // Exibe o resultado na tela
-      divResultado.innerText = mensagem;
-    }
-  </script>
-
+  <h1>Mercadinho do Asafe</h1>
+  <h2>Bem vindo ao mercado do Asafe</h2>
+  <p>Aperte aqui para mais informações</p>
+  <input type="text">
+  <button>Pesquisar</button>
 </body>
 </html>
